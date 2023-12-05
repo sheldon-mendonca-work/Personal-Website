@@ -1,0 +1,92 @@
+.works{
+    background-image: var(--third-gradient);
+    position: relative;
+}
+
+.subTitle{
+    color: var(--heading-color);
+    font-weight: 700;
+    margin-bottom: 4rem;
+    display: block;
+}
+
+.title{
+    font-size: var(--h3-fontsize);
+    margin-bottom: 1rem;
+}
+
+.description{
+    min-height: 11rem;
+}
+
+.modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+}
+
+.modalContent{
+    width: 30rem;
+    position: relative;
+    background-color: var(--container-color);
+    padding: 4.5rem 2.5rem 2.5rem 2.5rem;
+    border-radius: 1.5rem;
+}
+
+.modalClose{
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    font-size: 1.5rem;
+    color: var(--heading-color);
+    cursor: pointer;
+}
+
+.modalTitle, .modalDescription{
+    text-align: center;
+}
+
+.modalTitle{
+    font-size: var(--h3-fontsize);
+    margin-bottom: 1rem;
+}
+
+.modalDescription{
+    padding: 0 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.modalServices{
+    list-style: none;
+    gap: 0.75rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.modalService{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.modalIcon{
+    display: inline-block;
+    color: var(--heading-color);
+    font-size: 1.1rem;
+}
+
+.activeModal{
+    opacity: 1;
+    visibility: visible;
+}

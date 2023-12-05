@@ -1,0 +1,80 @@
+.portfolio{
+    background-image: var(--third-gradient);
+}
+
+.container{
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+}
+
+.items{
+    position: relative;
+}
+
+.imgWrapper{
+    border-radius: 18px;
+    overflow: hidden;
+}
+
+.img{
+    height: 15rem;
+    width: 100%;
+    object-fit: cover;
+    vertical-align: middle;
+    transition: all 0.3s var(--transition);
+}
+
+.items:hover .img{
+    transform: scale(1.05);
+}
+
+.list{
+    display: flex;
+    justify-content: center;
+    column-gap: 2.5rem;
+    margin-bottom: 4rem;
+}
+
+.listItem{
+    font-size: var(--l-textsize);
+    color: var(--heading-color);
+    font-weight: 700;
+    position: relative;
+    transition: all 0.7s var(--transition);
+}
+
+.listItem::before{
+    content: "";
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-color);
+    position: absolute;
+    bottom: -1rem;
+    left: 0;
+    transition: all 0.7s var(--transition);
+}
+
+.listItem:hover::before{
+    width: 100%;
+}
+
+.active{
+    color: var(--primary-color);
+}
+
+.category{
+    color: var(--primary-color);
+    font-size: var(--sm-textsize);
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.category, .description{
+    margin-top: 2rem;
+}
+
+
+.description{
+    min-height: 8rem;
+}

@@ -1,0 +1,135 @@
+.largest{
+    font-size: var(--xl-fontsize);
+}
+
+.heading1{
+    font-size: var(--h1-fontsize);
+}
+
+.textCs{
+    text-transform: uppercase;
+}
+
+.container{
+    max-width: 80%;
+    margin: 0 auto;
+    padding-inline: 1rem;
+}
+
+.grid{
+    display: grid;
+    column-gap: 1.5rem;
+    row-gap: 1.5rem;
+}
+
+.btn, .btn:link, .btn:visited{
+    color: var(--text-color);
+    font-weight: 700;
+    height: 3.5rem;
+    background-color: var(--container-color);
+    display: grid;
+    place-items: center;
+    border: 2px solid var(--border-color);
+    border-radius: 100rem;
+    padding-inline: 2.5rem;
+    box-shadow: var(--base-shadow);
+    position: relative;
+    z-index: 3;
+}
+
+.btn::before{
+    content: '';
+    position: absolute;
+    inset: 2px;
+    background-color: var(--primary-color);
+    border-radius: inherit;
+    transform: scale(0.3);
+    filter: blur(0.5rem);
+    opacity: 0;
+    transition: all 0.7s var(--transition);
+    z-index: -1;
+}
+
+.btn:hover::before{
+    transform: scale(1);
+    filter: blur(0);
+    opacity: 1;
+}
+
+.shape{
+    position: absolute;
+    filter: invert(1);
+    opacity: 0.6;
+}
+
+.cShape{
+    right: -1.5rem;
+    bottom: -1.5rem;
+    width: 9rem;
+    height: 9rem;
+}
+
+.link{
+    display: inline-flex;
+    align-items: center;
+    color: var(--heading-color);
+    font-weight: 700;
+}
+
+.icon{
+    color: var(--primary-color);
+    margin-left: 1rem;
+    transition: all 0.3s var(--transition);
+}
+
+.link:hover .icon{
+    margin-left: 0.75rem;
+}
+
+.section{
+    padding-bottom: 15rem;
+}
+
+.title,
+.titleTwo,
+.subTitle{
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.title{
+    font-size: var(--h1-fontsize);
+}
+
+.titleTwo{
+    font-size: var(--h4-fontsize);
+}
+
+.subTitle{
+    color: var(--primary-color);
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 3rem;
+}
+
+.subTitle span{
+    font-family: var(--secondary-font);
+    color: var(--heading-color);
+    font-size: var(--h3-fontsize);
+    text-transform: capitalize;
+}
+
+.card{
+    background-color: var(--container-color);
+    overflow: hidden;
+}
+
+.cardOne{
+    padding: 2rem ;
+    border-radius: 1rem;
+}
+
+.cardTwo{
+    padding: 2rem;
+    border-radius: 1.5rem;
+}

@@ -1,0 +1,182 @@
+.home{
+    background-color: var(--first-gradient);
+    padding-bottom: 10rem;
+}
+
+.wrapper{
+    min-height: 100vh;
+    display: grid;
+    align-items: center;
+    max-width: 100rem;
+    margin-inline: auto;
+    
+}
+
+.homeContainer{
+    width: 100%;
+    position: relative;
+}
+
+.subTitle, .homeJob{
+    font-weight: 700;
+}
+
+.homeText{
+    text-transform: uppercase;
+}
+
+.highlight{
+    color: var(--primary-color);
+}
+
+.cursive b{
+    font-family: var(--secondary-font);
+    font-size: var(--h2-fontsize);
+    margin-left: 0.5rem;
+}
+
+.title{
+    display: block;
+    max-width: 30rem;
+}
+
+.homeDesc{
+    margin-block: 2rem;
+    max-width: 30rem;
+    font-size: var(--l-textsize);
+}
+
+.socialMedia{
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.socialLink{
+    color: var(--text-color);
+    font-size: var(--h2-fontsize);
+    transition: all 0.5s var(--transition);
+}
+
+.socialLink:hover{
+    color: var(--primary-color);
+}
+
+.homeButtons{
+    display: flex;
+    gap: 4rem;
+}
+
+.skills, .skills:link, .skills:visited{
+    color: var(--text-color);
+    font-weight: 700;
+    height: 3.5rem;
+    display: grid;
+    place-items: center;
+    position: relative;
+    padding-inline: 2.5rem;
+    border-radius: 100rem;
+    z-index: 1;
+}
+
+.skills::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -40%;
+    transform: translateY(-50%);
+    width: 3rem;
+    height: 2px;
+    background-color: var(--border-color);
+}
+
+.imgWrapper{
+    position: absolute;
+    top: 0;
+    right: 1rem;
+    max-width: 40rem;
+    width: 100%;
+}
+
+.banner{
+    background-color: var(--primary-color);
+    padding-bottom: 100%;
+    border-radius: 50%;
+    position: relative;
+    bottom: 0%;
+    z-index: 1;
+}
+
+.profileImg{
+    position: absolute;
+    bottom: 0;
+    width: 40rem;
+    border-radius: 30rem;
+    object-fit: cover;
+}
+
+.data{
+    position: absolute;
+    text-transform: uppercase;
+    border: 2px solid var(--border-color);
+    background-color: var(--container-color);
+    box-shadow: var(--base-shadow);
+    padding-inline: 1.25rem;
+    position: absolute;
+    height: 5rem;
+    width: 15rem;
+    border-radius: 100rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    z-index: 1;
+}
+
+.dataOne{
+    left: -4%;
+    bottom: 20%;
+}
+
+.dataTwo{
+    bottom: 12%;
+    right: 0%;
+}
+
+.data .textLg, .data .textSm{
+    color: var(--heading-color);
+    font-weight: 700;
+}
+
+.data .textLg{
+    width: 50%;
+    text-align: center;
+    font-size: 2rem;
+}
+
+
+.textLg b, .textSm b{
+    color: var(--primary-color);
+}
+
+.shapeOne{
+    width: 15rem;
+    height: 15rem;
+    top: -6%;
+    right: 6%;
+}
+
+.shapeTwo, .shapeThree{
+    width: 10rem;
+    height: 10rem;
+}
+
+.shapeTwo{
+    bottom: 8%;
+    left: -16%;
+}
+
+.shapeThree{
+    bottom: 0;
+    right: -2%;
+}

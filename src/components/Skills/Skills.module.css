@@ -1,0 +1,64 @@
+.skills{
+    background-image: var(--second-gradient);
+}
+
+.container{
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 4rem;
+}
+
+.titles{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.name{
+    font-style: var(--h1-fontsize);
+}
+
+.number{
+    color: var(--heading-color);
+    font-weight: 700;
+}
+
+.number span{
+    color: var(--primary-color);
+}
+
+.description{
+    margin-bottom: 2rem;
+    min-height: 5rem;
+}
+
+.titles, .description{
+    padding-inline: 2rem;
+}
+
+.bar, .percentage{
+    height: 2px;
+}
+
+.bar{
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.percentage{
+    display: block;
+    background-color: var(--primary-color);
+    position: relative;
+}
+
+.percentage span{
+    background-color: var(--container-color);
+    border: 2px solid var(--border-color);
+    box-shadow: var(--base-shadow);
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    position: absolute;
+    right: 0;
+    top: -0.75rem;
+}
