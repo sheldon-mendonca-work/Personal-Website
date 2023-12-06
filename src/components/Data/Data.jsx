@@ -9,32 +9,16 @@ export const links = [
     path: 'home',
   },
   {
-    name: 'Services',
-    path: 'services',
-  },
-  {
     name: 'Skills',
     path: 'skills',
   },
   {
-    name: 'Works',
-    path: 'work',
+    name: 'Portfolio',
+    path: 'portfolio',
   },
   {
-    name: 'Resume',
-    path: 'resume',
-  },
-  {
-    name: 'Testimonials',
-    path: 'testimonial',
-  },
-  {
-    name: 'Pricing',
-    path: 'pricing',
-  },
-  {
-    name: 'Blog',
-    path: 'blog',
+    name: 'Qualifications',
+    path: 'qualifications',
   },
   {
     name: 'Contact',
@@ -181,6 +165,25 @@ export const projects = [
   },
   {
     id: 4,
+    img: Project4,
+    category: 'Backend',
+    link: "https://sheldon-mocha-backend.netlify.app/",
+    title: 'Mocha (Backend)',
+    description:
+      'Backend of Mocha built with Express and MongoDB. This app is hosted on Netlify.',
+  },
+  
+  {
+    id: 5,
+    img: Project3,
+    category: 'Frontend',
+    link: "https://cloneflix-frontend.netlify.app/browse", 
+    title: 'CloneFlix',
+    description:
+      'CloneFlix is a front-end clone of Netflix. It is made from React, Typescript, Redux and Chakra UI.',
+  },
+  {
+    id: 6,
     img: Project4,
     category: 'Backend',
     link: "https://sheldon-mocha-backend.netlify.app/",

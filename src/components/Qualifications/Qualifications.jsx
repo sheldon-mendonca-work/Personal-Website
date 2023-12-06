@@ -1,6 +1,5 @@
 import classes from './Qualifications.module.css';
 import styles from '../../Reusable.module.css';
-import { FaSuitcase, FaCalendar } from "react-icons/fa6";
 import { cv } from '../Data/Data';
 import Card from './Card';
 
@@ -17,7 +16,7 @@ const Qualifications = () => {
         </p> 
 
         <div className={`${styles.container} ${classes.container} ${styles.grid}`}>
-            <div className={classes.group}>
+            <div className={`${classes.group} ${classes.education}`}>
                 <h3 className={classes.heading}>Education</h3>
                 <div className={classes.items}>
                     {
@@ -28,7 +27,7 @@ const Qualifications = () => {
                 </div>
             </div>
 
-            <div className={classes.group}>
+            <div className={`${classes.group} ${classes.experience}`}>
                 <h3 className={classes.heading}>Experience</h3>
                 <div className={classes.items}>
                     {

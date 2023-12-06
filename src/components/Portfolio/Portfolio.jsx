@@ -5,6 +5,7 @@ import { projects } from '../Data/Data';
 import { useState } from 'react';
 import Items from './Items';
 import { AnimatePresence } from 'framer-motion';
+import './Portfolio.css'
 
 const Portfolio = () => {
 
@@ -33,7 +34,7 @@ const Portfolio = () => {
 
         <List navList={category} filteredItems={filteredItems} />
 
-        <div className={`${styles.container} ${classes.container} ${styles.grid}`}>
+        <div className={`${styles.container} ${classes.container} ${styles.grid} portfolioContainer`}>
             <AnimatePresence initial={false}>
                 <Items workItems={projectItems} />
             </AnimatePresence>

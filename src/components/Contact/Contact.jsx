@@ -1,11 +1,17 @@
 import classes from './Contact.module.css';
 import styles from '../../Reusable.module.css';
-import { FaArrowRight, FaLinkedin, FaGithub } from "react-icons/fa";
+import { FaArrowRight, FaLinkedin, FaGithub, FaFileAlt } from "react-icons/fa";
 import { MdOutlineEmail } from "react-icons/md";
 import { toast } from 'react-toastify';
 import { copyToClipboard } from '../util/util-functions';
+import { useContext } from 'react';
+import { ThemeContext } from '../../context/ThemeContext';
 
 const Contact = () => {
+
+    const { theme } = useContext(ThemeContext);
+
+    
     const copyMailHandler = async () => {
         const copiedMail = await copyToClipboard("sheldonmendoncawork123@gmail.com");
         if(copiedMail){
@@ -13,6 +19,16 @@ const Contact = () => {
         }else{
             toast("Copy here: sheldonmendoncawork123@gmail.com");
         }
+    }
+
+    const formSubmitHandler = async (event) => {
+        event.preventDefault();
+
+        const name = event.target[0].value;
+        const email = event.target[1].value;
+        const message = event.target[2].value;
+        console.log(name, email, message);
+        return;
     }
 
     return <section className={`${classes.contact} ${styles.section} ${styles.grid}`} id='contact'>
@@ -57,6 +73,16 @@ const Contact = () => {
                             Check out my work <FaArrowRight className={styles.icon}/>
                         </a>
                     </div>
+
+                    <div className={classes.card}>
+                        <FaFileAlt className={classes.cardIcon} />
+                        <h3 className={classes.cardTitle}>Resume</h3>
+                        <div className={classes.cardData}>Download my resume</div>
+
+                        <a download={''} href='Resume_Sheldon_Mendonca.docx' className={`${classes.link} ${styles.link}`} target="_blank" rel="noopener noreferrer">
+                            Download <FaArrowRight className={styles.icon}/>
+                        </a>
+                    </div>
                     
                 </div>
             </div>
@@ -64,19 +90,19 @@ const Contact = () => {
             <div className={`${classes.content}`}>
                 <h3 className={`${classes.title}`}>Leave me a message.</h3>
 
-                <form className={classes.form} method='POST'>
+                <form className={classes.form} method='POST' onSubmit={formSubmitHandler}>
                     <div className={classes.formDiv}>
-                        <label htmlFor="name" className={classes.formTag} required={true}>Name</label>
+                        <label htmlFor="name" className={`${classes.formTag} ${theme === 'darkTheme' ? classes.formTagDark : classes.formTagLight}`} required={true}>Name</label>
                         <input type="text" name="name" id="name" className={classes.formInput} placeholder='Enter your name' />
                     </div>
 
                     <div className={classes.formDiv}>
-                        <label htmlFor="email" className={classes.formTag} required={true}>Email Address</label>
+                        <label htmlFor="email" className={`${classes.formTag} ${theme === 'darkTheme' ? classes.formTagDark : classes.formTagLight}`} required={true}>Email Address</label>
                         <input type="email" name="email" id="email" className={classes.formInput} placeholder='Enter your email address' />
                     </div>
 
                     <div className={`${classes.formDiv} ${classes.formArea}`}>
-                        <label htmlFor="text" className={classes.formTag} required={true}>Message</label>
+                        <label htmlFor="text" className={`${classes.formTag} ${theme === 'darkTheme' ? classes.formTagDark : classes.formTagLight}`} required={true}>Message</label>
                         <textarea type="text" name="text" id="text" className={classes.formInput} rows={10} cols={30} placeholder="What's up?" />
                     </div>
 

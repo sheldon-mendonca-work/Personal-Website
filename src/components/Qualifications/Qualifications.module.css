@@ -7,6 +7,14 @@
     width: 100%;
 }
 
+@media only screen and (max-width: 600px) {
+    .container{
+        grid-template-columns: 1fr;
+        grid-template-rows: max-content max-content;
+        width: 90%;
+    }
+}
+
 .heading{
     text-align: center;
     font-size: var(--h3-fontsize);
@@ -27,11 +35,18 @@
 
 .header{
     padding: 2rem;
+    cursor: pointer;
 }
 
 .subtitle{
     font-size: var(--h4-fontsize);
-    cursor: pointer;
+}
+
+
+@media only screen and (max-width: 1200px) {
+    .subtitle{
+        font-size: var(--h5-fontsize);
+    }
 }
 
 .icon{
@@ -83,3 +98,14 @@
 .description{
     margin-block: 1.5rem 2rem;
 }
+
+@media only screen and (max-width: 600px) {
+    .experience{
+        grid-row: 1/2;
+    }
+
+    .education{
+        grid-row: 2/-1;
+    }
+}
+

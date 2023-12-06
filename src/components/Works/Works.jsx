@@ -9,11 +9,13 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import './Works.css';
 import shape2 from '../../assets/shape-2.png';
-import { useState } from 'react';
+import { useContext, useState } from 'react';
+import { ThemeContext } from '../../context/ThemeContext';
 
 const Works = () => {
 
     const [ toggleIndex, setToggleIndex ] = useState(0);
+    const { theme } = useContext(ThemeContext);
 
 
     return <section className={`${classes.works} ${styles.section}`} id='works'>
@@ -58,7 +60,7 @@ const Works = () => {
                         <span onClick={()=>setToggleIndex(index+1)} className={`${styles.link}`}>
                             See More<FaArrowRight className={styles.icon}/>
                         </span>
-                        <img src={shape2} alt="" className={`${styles.shape} ${styles.cShape}`} />
+                        <img src={shape2} alt="" className={`${theme === 'lightTheme' ? styles.shapeLight : styles.shape} ${styles.cShape}`} />
                     </SwiperSlide>   
                 ))
             }

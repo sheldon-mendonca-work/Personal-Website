@@ -3,18 +3,37 @@
     padding-bottom: 10rem;
 }
 
+@media only screen and (max-width: 1500px) {
+    .home{
+        padding-bottom: 0;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .home{
+        margin-bottom: 3rem;
+    }
+}
+
 .wrapper{
     min-height: 100vh;
     display: grid;
     align-items: center;
     max-width: 100rem;
-    margin-inline: auto;
-    
+    margin-inline: auto; 
 }
 
 .homeContainer{
     width: 100%;
     position: relative;
+}
+
+@media only screen and (max-width: 1100px) {
+    .homeContainer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 .subTitle, .homeJob{
@@ -40,10 +59,22 @@
     max-width: 30rem;
 }
 
+@media only screen and (max-width: 1100px) {
+    .title{
+        max-width: 100%;
+    }
+}
+
 .homeDesc{
     margin-block: 2rem;
     max-width: 30rem;
     font-size: var(--l-textsize);
+}
+
+@media only screen and (max-width: 1100px) {
+    .homeDesc{
+        max-width: 100%;
+    }
 }
 
 .socialMedia{
@@ -66,6 +97,7 @@
     display: flex;
     gap: 4rem;
 }
+
 
 .skills, .skills:link, .skills:visited{
     color: var(--text-color);
@@ -98,6 +130,21 @@
     width: 100%;
 }
 
+@media only screen and (max-width: 1500px) {
+    .imgWrapper{
+        max-width: 30rem;
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    .imgWrapper{
+        position: relative;
+        margin-top: 3rem;
+        right: -1rem;
+    }
+}
+
+
 .banner{
     background-color: var(--primary-color);
     padding-bottom: 100%;
@@ -113,6 +160,12 @@
     width: 40rem;
     border-radius: 30rem;
     object-fit: cover;
+}
+
+@media only screen and (max-width: 1500px) {
+    .profileImg{
+        width: 30rem;
+    }
 }
 
 .data{
@@ -166,9 +219,23 @@
     right: 6%;
 }
 
+@media only screen and (max-width: 1500px) {
+    .shapeOne{
+        width: 10rem;
+        height: 10rem;
+    }
+}
+
 .shapeTwo, .shapeThree{
     width: 10rem;
     height: 10rem;
+}
+
+@media only screen and (max-width: 1500px) {
+    .shapeTwo, .shapeThree{
+        width: 8rem;
+        height: 8rem;
+    }
 }
 
 .shapeTwo{

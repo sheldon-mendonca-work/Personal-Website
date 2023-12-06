@@ -1,5 +1,17 @@
 .largest{
-    font-size: var(--xl-fontsize);
+    font-size: var(--xxl-fontsize);
+}
+
+@media only screen and (max-width: 1250px) {
+    .largest{
+        font-size: var(--xl-fontsize);
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    .largest{
+        font-size: 3.5rem;
+    }
 }
 
 .heading1{
@@ -14,6 +26,18 @@
     max-width: 80%;
     margin: 0 auto;
     padding-inline: 1rem;
+}
+
+@media only screen and (max-width: 1500px) {
+    .container{
+        max-width: 90%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .container{
+        max-width: 100%;
+    }
 }
 
 .grid{
@@ -62,6 +86,11 @@
     opacity: 0.6;
 }
 
+.shapeLight{
+    position: absolute;
+    opacity: 0.6;
+}
+
 .cShape{
     right: -1.5rem;
     bottom: -1.5rem;
@@ -88,6 +117,12 @@
 
 .section{
     padding-bottom: 15rem;
+}
+
+@media only screen and (max-width: 1300px) {
+    .section{
+        padding-bottom: 6rem;
+    }
 }
 
 .title,

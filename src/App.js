@@ -1,6 +1,7 @@
 import classes from './App.module.css';
 import Contact from './components/Contact/Contact';
 import Footer from './components/Footer/Footer';
+import Header from './components/Header/Header';
 import Home from './components/Home/Home';
 import Portfolio from './components/Portfolio/Portfolio';
 import Qualifications from './components/Qualifications/Qualifications';
@@ -24,6 +25,7 @@ const App = () => {
         theme="dark"
         />
       <main className={classes.App}>
+        <Header />
         <Home />
         <Skills />
         <Portfolio />
@@ -31,7 +33,6 @@ const App = () => {
         <Contact />
         <Footer />
       </main>
-      {/* <NavBar /> */}
     </>
   );
 }

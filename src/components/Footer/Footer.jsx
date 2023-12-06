@@ -1,9 +1,21 @@
 import classes from './Footer.module.css';
 import styles from '../../Reusable.module.css';
 import { Link } from 'react-router-dom';
-import { FaLinkedin, FaGithub } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaFileAlt, FaRegEnvelope  } from "react-icons/fa";
+import { copyToClipboard } from '../util/util-functions';
+import { toast } from 'react-toastify';
 
 const Footer = () => {
+
+    const copyMailHandler = async () => {
+        const copiedMail = await copyToClipboard("sheldonmendoncawork123@gmail.com");
+        if(copiedMail){
+            toast("Copied email to your clipboard.");
+        }else{
+            toast("Copy here: sheldonmendoncawork123@gmail.com");
+        }
+    }
+
     return <footer className={classes.footer}>
         <div className={`${styles.container} ${classes.container}`}>
             <h1 className={classes.title}>Sheldon Mendonca</h1>
@@ -34,21 +46,21 @@ const Footer = () => {
             </ul>
 
             <div className={classes.social}>
-                    <Link to="#" className={classes.socialLink} target='_blank'>
-                        <FaLinkedin />
-                    </Link>
+                <Link to="https://in.linkedin.com/in/sheldon-mendonca" className={classes.socialLink} target="_blank" rel="noopener noreferrer">
+                    <FaLinkedin />
+                </Link>
 
-                    <Link to="#" className={classes.socialLink} target='_blank'>
-                        <FaGithub />
-                    </Link>
+                <Link to="https://github.com/sheldon-mendonca-work" className={classes.socialLink} target="_blank" rel="noopener noreferrer">
+                    <FaGithub />
+                </Link>
 
-                    <div to="#" className={classes.socialLink}>
-                        <FaGithub />
-                    </div>
-                    <div to="#" className={classes.socialLink}>
-                        <FaGithub />
-                    </div>
-                </div>
+                <span onClick={copyMailHandler} className={classes.socialLink}>
+                    <FaRegEnvelope  />
+                </span>
+                <a download={''} href='Resume_Sheldon_Mendonca.docx' className={classes.socialLink}>
+                    <FaFileAlt />
+                </a>
+            </div>
         </div>
 
     </footer>

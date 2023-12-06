@@ -1,5 +1,6 @@
 .swiper-wrapper{
     margin-bottom: 3rem;
+    height: auto;
 }
 
 .swiper-horizontal > .swiper-pagination-bullets{
@@ -7,6 +8,7 @@
     position: relative;
     display: inline-block;
     left: 50%;
+    transform: translateX(-50%);
 }
 
 .swiper-horizontal > .swiper-pagination-bullets::before{
