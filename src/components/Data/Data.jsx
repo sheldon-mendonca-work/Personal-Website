@@ -2,6 +2,7 @@ import Project1 from '../../assets/flashkart-frontend.png';
 import Project2 from '../../assets/mocha-frontend-2.png';
 import Project3 from '../../assets/cloneflix-frontend.png';
 import Project4 from '../../assets/mocha-frontend.png';
+import Project5 from '../../assets/flashkart-backend-2.png';
 
 export const links = [
   {
@@ -23,65 +24,6 @@ export const links = [
   {
     name: 'Contact',
     path: 'contact',
-  },
-];
-
-export const services = [
-  {
-    id: 1,
-    name: 'Web Development',
-    title: 'Web Design',
-    description:
-      'Web designers craft the overall vision & plan for a website layout. Professional logo development: Business, Company, or Personal.',
-    modalTitle: "Title1",
-    modalDescription: "Title2",
-    modalService: [
-      "XXXXXXXX",
-      "XXXXXXXX",
-      "XXXXXXXX",
-    ],
-  },
-  {
-    id: 2,
-    name: ' Apps Development ',
-    title: ' iOS & Android ',
-    description:
-      'Design Software applications to run on mobile devices. Modern and mobile-ready application that will help you reach all of your marketing.',
-      modalTitle: "Title1",
-      modalDescription: "Title2",
-      modalService: [
-        "XXXXXXXX",
-        "XXXXXXXX",
-        "XXXXXXXX",
-      ],
-  },
-  {
-    id: 3,
-    name: ' Game Development ',
-    title: ' Unity & Unreal ',
-    description:
-      ' Creating games & describes the design, development and release of a game. Developing unique mobile android and ios games. ',
-      modalTitle: "Title1",
-      modalDescription: "Title2",
-      modalService: [
-        "XXXXXXXX",
-        "XXXXXXXX",
-        "XXXXXXXX",
-      ],
-  },
-  {
-    id: 4,
-    name: ' Advertising ',
-    title: ' Google Ads ',
-    description:
-      ' Advertising services include: Google search result pages, gmails, YouTube and other websites participated in Google Ads program. ',
-  },
-  {
-    id: 5,
-    name: ' Music Writing ',
-    title: ' Sound Track ',
-    description:
-      'Music copying, writing, creating, transcription and composition services.',
   },
 ];
 
@@ -172,24 +114,14 @@ export const projects = [
     description:
       'Backend of Mocha built with Express and MongoDB. This app is hosted on Netlify.',
   },
-  
   {
     id: 5,
-    img: Project3,
-    category: 'Frontend',
-    link: "https://cloneflix-frontend.netlify.app/browse", 
-    title: 'CloneFlix',
-    description:
-      'CloneFlix is a front-end clone of Netflix. It is made from React, Typescript, Redux and Chakra UI.',
-  },
-  {
-    id: 6,
-    img: Project4,
+    img: Project5,
     category: 'Backend',
-    link: "https://sheldon-mocha-backend.netlify.app/",
-    title: 'Mocha (Backend)',
+    link: "https://flash-backend-ver1-sheldon-mendoncas-projects.vercel.app/",
+    title: 'Flash Kart (Backend)',
     description:
-      'Backend of Mocha built with Express and MongoDB. This app is hosted on Netlify.',
+      'Backend of Flash Kart built with Express and Postgres. SQL injection is avoided using prepared queries.',
   },
   
 ];

@@ -4,12 +4,20 @@ import { FaArrowRight, FaLinkedin, FaGithub, FaFileAlt } from "react-icons/fa";
 import { MdOutlineEmail } from "react-icons/md";
 import { toast } from 'react-toastify';
 import { copyToClipboard } from '../util/util-functions';
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { ThemeContext } from '../../context/ThemeContext';
+import axios from 'axios';
 
 const Contact = () => {
+    const url = "https://sheldon-website-backend.netlify.app";
 
     const { theme } = useContext(ThemeContext);
+    const initContactDetails = {
+        name: "",
+        email: "",
+        message: ""
+    }
+    const [ contactDetails, setContactDetails ] = useState(initContactDetails)
 
     
     const copyMailHandler = async () => {
@@ -22,13 +30,27 @@ const Contact = () => {
     }
 
     const formSubmitHandler = async (event) => {
-        event.preventDefault();
-
-        const name = event.target[0].value;
-        const email = event.target[1].value;
-        const message = event.target[2].value;
-        console.log(name, email, message);
-        return;
+        try {
+            event.preventDefault();
+    
+            const name = contactDetails.name;
+            const email = contactDetails.email;
+            const message = contactDetails.message;
+            const res = await axios.post(`${url}/mail`, {
+                name, email, message
+            });
+            
+            if(res){
+                toast("Mail sent successfully.");
+                setContactDetails(initContactDetails);
+            }else{
+                throw new Error(res);
+            }
+            
+        } catch (error) {
+            toast("Sending mail failed: " + error);
+            console.log(error);
+        }
     }
 
     return <section className={`${classes.contact} ${styles.section} ${styles.grid}`} id='contact'>
@@ -93,17 +115,17 @@ const Contact = () => {
                 <form className={classes.form} method='POST' onSubmit={formSubmitHandler}>
                     <div className={classes.formDiv}>
                         <label htmlFor="name" className={`${classes.formTag} ${theme === 'darkTheme' ? classes.formTagDark : classes.formTagLight}`} required={true}>Name</label>
-                        <input type="text" name="name" id="name" className={classes.formInput} placeholder='Enter your name' />
+                        <input type="text" name="name" id="name" className={classes.formInput} placeholder='Enter your name' value={initContactDetails.name} onChange={(event)=>setContactDetails((state) => ({...state, name: event.target.value}))} />
                     </div>
 
                     <div className={classes.formDiv}>
                         <label htmlFor="email" className={`${classes.formTag} ${theme === 'darkTheme' ? classes.formTagDark : classes.formTagLight}`} required={true}>Email Address</label>
-                        <input type="email" name="email" id="email" className={classes.formInput} placeholder='Enter your email address' />
+                        <input type="email" name="email" id="email" className={classes.formInput} placeholder='Enter your email address' value={initContactDetails.email} onChange={(event)=>setContactDetails((state) => ({...state, email: event.target.value}))} />
                     </div>
 
                     <div className={`${classes.formDiv} ${classes.formArea}`}>
                         <label htmlFor="text" className={`${classes.formTag} ${theme === 'darkTheme' ? classes.formTagDark : classes.formTagLight}`} required={true}>Message</label>
-                        <textarea type="text" name="text" id="text" className={classes.formInput} rows={10} cols={30} placeholder="What's up?" />
+                        <textarea type="text" name="text" id="text" className={classes.formInput} rows={10} cols={30} placeholder="What's up?" value={initContactDetails.message} onChange={(event)=>setContactDetails((state) => ({...state, message: event.target.value}))} />
                     </div>
 
                     <button type='submit' to="#" className={`${styles.btn} ${classes.sendMsg}`}>
