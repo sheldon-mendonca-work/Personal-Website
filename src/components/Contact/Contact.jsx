@@ -115,17 +115,17 @@ const Contact = () => {
                 <form className={classes.form} method='POST' onSubmit={formSubmitHandler}>
                     <div className={classes.formDiv}>
                         <label htmlFor="name" className={`${classes.formTag} ${theme === 'darkTheme' ? classes.formTagDark : classes.formTagLight}`} required={true}>Name</label>
-                        <input type="text" name="name" id="name" className={classes.formInput} placeholder='Enter your name' value={initContactDetails.name} onChange={(event)=>setContactDetails((state) => ({...state, name: event.target.value}))} />
+                        <input type="text" name="name" id="name" className={classes.formInput} placeholder='Enter your name' value={contactDetails.name} onChange={(event)=>setContactDetails((state) => ({...state, name: event.target.value}))} />
                     </div>
 
                     <div className={classes.formDiv}>
                         <label htmlFor="email" className={`${classes.formTag} ${theme === 'darkTheme' ? classes.formTagDark : classes.formTagLight}`} required={true}>Email Address</label>
-                        <input type="email" name="email" id="email" className={classes.formInput} placeholder='Enter your email address' value={initContactDetails.email} onChange={(event)=>setContactDetails((state) => ({...state, email: event.target.value}))} />
+                        <input type="email" name="email" id="email" className={classes.formInput} placeholder='Enter your email address' value={contactDetails.email} onChange={(event)=>setContactDetails((state) => ({...state, email: event.target.value}))} />
                     </div>
 
                     <div className={`${classes.formDiv} ${classes.formArea}`}>
                         <label htmlFor="text" className={`${classes.formTag} ${theme === 'darkTheme' ? classes.formTagDark : classes.formTagLight}`} required={true}>Message</label>
-                        <textarea type="text" name="text" id="text" className={classes.formInput} rows={10} cols={30} placeholder="What's up?" value={initContactDetails.message} onChange={(event)=>setContactDetails((state) => ({...state, message: event.target.value}))} />
+                        <textarea type="text" name="text" id="text" className={classes.formInput} rows={10} cols={30} placeholder="What's up?" value={contactDetails.message} onChange={(event)=>setContactDetails((state) => ({...state, message: event.target.value}))} />
                     </div>
 
                     <button type='submit' to="#" className={`${styles.btn} ${classes.sendMsg}`}>
