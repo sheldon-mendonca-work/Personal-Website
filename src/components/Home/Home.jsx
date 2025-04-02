@@ -71,7 +71,7 @@ const Home = () => {
                     {/* <Link to="https://docs.google.com/document/d/1evYwFwo_Ae9QMZdSW8Fz5E0Gst0xbUlN/edit?usp=drive_link&ouid=117650566023730412790&rtpof=true&sd=true" className={`${styles.btn} ${classes.homeText}`}>
                         Download CV
                     </Link> */}
-                    <a download={''} href='Resume_Sheldon_Mendonca.docx' className={`${styles.btn} ${classes.homeText}`}>
+                    <a download={''} href='Resume_Sheldon_Mendonca_2025.docx' className={`${styles.btn} ${classes.homeText}`}>
                         Download CV
                     </a>
 

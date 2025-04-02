@@ -101,7 +101,7 @@ const Contact = () => {
                         <h3 className={classes.cardTitle}>Resume</h3>
                         <div className={classes.cardData}>Download my resume</div>
 
-                        <a download={''} href='Resume_Sheldon_Mendonca.docx' className={`${classes.link} ${styles.link}`} target="_blank" rel="noopener noreferrer">
+                        <a download={''} href='Resume_Sheldon_Mendonca_2025.docx' className={`${classes.link} ${styles.link}`} target="_blank" rel="noopener noreferrer">
                             Download <FaArrowRight className={styles.icon}/>
                         </a>
                     </div>

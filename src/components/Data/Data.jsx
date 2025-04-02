@@ -128,17 +128,26 @@ export const projects = [
 
 export const cv = [
   {
-    id: 1,
     title: 'Full-stack development student',
     subtitle: 'Neog Camp',
-    date: '2023-Present',
+    date: '2023-2024',
     description:
       'Web development bootcamp to learn React, Typescript, Express, MongoDB and Jest by building real world applications.',
     category: 'education',
   },
-
+  
   {
     id: 2,
+    title: 'Associate Software Engineer',
+    subtitle: 'HireHunch',
+    date: '2024 - Present',
+    description:
+      'Develop multiple features across various platforms with high robustness.',
+    category: 'experience',
+  },
+
+  {
+    id: 3,
     title: 'Senior Stress Engineer',
     subtitle: 'Taal Tech. India Pvt. Ltd.',
     date: '2018-2022',
@@ -148,7 +157,7 @@ export const cv = [
   },
 
   {
-    id: 3,
+    id: 4,
     title: 'B.Tech. in Mechanical Engineering',
     subtitle: 'Manipal Institute of Technology',
     date: '2014 - 2018',
@@ -158,7 +167,7 @@ export const cv = [
   },
 
   {
-    id: 4,
+    id: 5,
     title: 'Intermediate Student',
     subtitle: 'Narayana Junior College',
     date: '2012 - 2014',
@@ -168,7 +177,7 @@ export const cv = [
   },
 
   {
-    id: 5,
+    id: 6,
     title: 'High School Student',
     subtitle: "St Andrew's High School",
     date: '2000 - 2012',

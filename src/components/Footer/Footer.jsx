@@ -57,7 +57,7 @@ const Footer = () => {
                 <span onClick={copyMailHandler} className={classes.socialLink}>
                     <FaRegEnvelope  />
                 </span>
-                <a download={''} href='Resume_Sheldon_Mendonca.docx' className={classes.socialLink}>
+                <a download={''} href='Resume_Sheldon_Mendonca_2025.docx' className={classes.socialLink}>
                     <FaFileAlt />
                 </a>
             </div>
